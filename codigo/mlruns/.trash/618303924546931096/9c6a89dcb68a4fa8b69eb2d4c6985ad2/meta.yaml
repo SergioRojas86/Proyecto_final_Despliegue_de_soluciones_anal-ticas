@@ -1,0 +1,16 @@
+artifact_uri: file:///home/ubuntu/proyecto_final_dsa/Sergio/codigo/mlruns/618303924546931096/9c6a89dcb68a4fa8b69eb2d4c6985ad2/artifacts
+deleted_time: 1699514106038
+end_time: 1699491873599
+entry_point_name: ''
+experiment_id: '618303924546931096'
+lifecycle_stage: deleted
+run_id: 9c6a89dcb68a4fa8b69eb2d4c6985ad2
+run_name: wise-cat-35
+run_uuid: 9c6a89dcb68a4fa8b69eb2d4c6985ad2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1699491842029
+status: 3
+tags: []
+user_id: ubuntu

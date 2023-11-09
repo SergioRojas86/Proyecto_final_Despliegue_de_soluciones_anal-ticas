@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ubuntu/proyecto_final_dsa/Sergio/codigo/mlruns/313921453188727850/0e421a2ff16b4d1483ddeb86350af1e6/artifacts
+end_time: 1699530236936
+entry_point_name: ''
+experiment_id: '313921453188727850'
+lifecycle_stage: active
+run_id: 0e421a2ff16b4d1483ddeb86350af1e6
+run_name: Experimento_2 XGBoost
+run_uuid: 0e421a2ff16b4d1483ddeb86350af1e6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1699530228693
+status: 3
+tags: []
+user_id: ubuntu

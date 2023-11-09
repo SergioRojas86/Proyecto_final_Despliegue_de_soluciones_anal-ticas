@@ -1,0 +1,16 @@
+artifact_uri: file:///home/ubuntu/proyecto_final_dsa/Sergio/codigo/mlruns/618303924546931096/b86d469ede5841cab471a23ae8780816/artifacts
+deleted_time: 1699514106038
+end_time: 1699491905409
+entry_point_name: ''
+experiment_id: '618303924546931096'
+lifecycle_stage: deleted
+run_id: b86d469ede5841cab471a23ae8780816
+run_name: rumbling-goat-567
+run_uuid: b86d469ede5841cab471a23ae8780816
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1699491873601
+status: 3
+tags: []
+user_id: ubuntu

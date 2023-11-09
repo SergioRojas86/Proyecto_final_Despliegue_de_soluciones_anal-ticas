@@ -1,0 +1,16 @@
+artifact_uri: file:///home/ubuntu/proyecto_final_dsa/Sergio/codigo/mlruns/141129884921247252/31b1420db977449bbdffd7b8fa3bdb0e/artifacts
+deleted_time: 1699525320552
+end_time: 1699525023600
+entry_point_name: ''
+experiment_id: '141129884921247252'
+lifecycle_stage: deleted
+run_id: 31b1420db977449bbdffd7b8fa3bdb0e
+run_name: Experimento_1 Decision Tree
+run_uuid: 31b1420db977449bbdffd7b8fa3bdb0e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1699525015703
+status: 3
+tags: []
+user_id: ubuntu

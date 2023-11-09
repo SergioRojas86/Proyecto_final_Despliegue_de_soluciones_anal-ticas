@@ -1,0 +1,16 @@
+artifact_uri: file:///home/ubuntu/proyecto_final_dsa/Sergio/codigo/mlruns/618303924546931096/69ad89430b21470a932c3087722d5e69/artifacts
+deleted_time: 1699514106038
+end_time: 1699491983977
+entry_point_name: ''
+experiment_id: '618303924546931096'
+lifecycle_stage: deleted
+run_id: 69ad89430b21470a932c3087722d5e69
+run_name: bittersweet-gull-319
+run_uuid: 69ad89430b21470a932c3087722d5e69
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1699491976592
+status: 3
+tags: []
+user_id: ubuntu

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ubuntu/proyecto_final_dsa/Sergio/codigo/mlruns/313921453188727850/bb9d8a9a7759444c91b5d11371a9a9d2/artifacts
+end_time: 1699528984266
+entry_point_name: ''
+experiment_id: '313921453188727850'
+lifecycle_stage: active
+run_id: bb9d8a9a7759444c91b5d11371a9a9d2
+run_name: Experimento_1 Gradient Boosting
+run_uuid: bb9d8a9a7759444c91b5d11371a9a9d2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1699528913503
+status: 3
+tags: []
+user_id: ubuntu

@@ -1,0 +1,16 @@
+artifact_uri: file:///home/ubuntu/proyecto_final_dsa/Sergio/codigo/mlruns/260655013583796318/36302e3cbabc41f5b2d1012a2f1aed0f/artifacts
+deleted_time: 1699514103363
+end_time: 1699503914481
+entry_point_name: ''
+experiment_id: '260655013583796318'
+lifecycle_stage: deleted
+run_id: 36302e3cbabc41f5b2d1012a2f1aed0f
+run_name: skittish-flea-290
+run_uuid: 36302e3cbabc41f5b2d1012a2f1aed0f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1699503880991
+status: 3
+tags: []
+user_id: ubuntu

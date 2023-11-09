@@ -1,0 +1,16 @@
+artifact_uri: file:///home/ubuntu/proyecto_final_dsa/Sergio/codigo/mlruns/179995065625055110/5b8bd215ead74489bd48f6a79a73835c/artifacts
+deleted_time: 1699508610686
+end_time: 1699508393036
+entry_point_name: ''
+experiment_id: '179995065625055110'
+lifecycle_stage: deleted
+run_id: 5b8bd215ead74489bd48f6a79a73835c
+run_name: Random Forest
+run_uuid: 5b8bd215ead74489bd48f6a79a73835c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1699508306670
+status: 3
+tags: []
+user_id: ubuntu

@@ -1,0 +1,16 @@
+artifact_uri: file:///home/ubuntu/proyecto_final_dsa/Sergio/codigo/mlruns/260655013583796318/9b60a405386f4795aa976a2f8b64072b/artifacts
+deleted_time: 1699514103363
+end_time: 1699503880989
+entry_point_name: ''
+experiment_id: '260655013583796318'
+lifecycle_stage: deleted
+run_id: 9b60a405386f4795aa976a2f8b64072b
+run_name: handsome-fawn-746
+run_uuid: 9b60a405386f4795aa976a2f8b64072b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1699503873814
+status: 3
+tags: []
+user_id: ubuntu

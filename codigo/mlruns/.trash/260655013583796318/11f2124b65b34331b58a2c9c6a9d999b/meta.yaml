@@ -1,0 +1,16 @@
+artifact_uri: file:///home/ubuntu/proyecto_final_dsa/Sergio/codigo/mlruns/260655013583796318/11f2124b65b34331b58a2c9c6a9d999b/artifacts
+deleted_time: 1699514103363
+end_time: 1699503947685
+entry_point_name: ''
+experiment_id: '260655013583796318'
+lifecycle_stage: deleted
+run_id: 11f2124b65b34331b58a2c9c6a9d999b
+run_name: fearless-hog-721
+run_uuid: 11f2124b65b34331b58a2c9c6a9d999b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1699503914483
+status: 3
+tags: []
+user_id: ubuntu

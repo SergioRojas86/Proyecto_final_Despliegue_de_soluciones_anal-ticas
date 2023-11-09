@@ -1,0 +1,16 @@
+artifact_uri: file:///home/ubuntu/proyecto_final_dsa/Sergio/codigo/mlruns/548409778572218799/e549dfcf9581497184b4f4860ac28a6c/artifacts
+deleted_time: 1699514108926
+end_time: 1699506872096
+entry_point_name: ''
+experiment_id: '548409778572218799'
+lifecycle_stage: deleted
+run_id: e549dfcf9581497184b4f4860ac28a6c
+run_name: Bagging
+run_uuid: e549dfcf9581497184b4f4860ac28a6c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1699506842158
+status: 3
+tags: []
+user_id: ubuntu

@@ -1,0 +1,16 @@
+artifact_uri: file:///home/ubuntu/proyecto_final_dsa/Sergio/codigo/mlruns/618303924546931096/a0acb0f72b5d4c9b82dcb828b8955c78/artifacts
+deleted_time: 1699514106038
+end_time: 1699491842026
+entry_point_name: ''
+experiment_id: '618303924546931096'
+lifecycle_stage: deleted
+run_id: a0acb0f72b5d4c9b82dcb828b8955c78
+run_name: popular-mink-178
+run_uuid: a0acb0f72b5d4c9b82dcb828b8955c78
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1699491835284
+status: 3
+tags: []
+user_id: ubuntu

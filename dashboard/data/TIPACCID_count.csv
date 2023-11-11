@@ -1,0 +1,25 @@
+,x,z,y
+15,Colisión con vehículo automotor,No fatal,205274
+9,Colisión con motocicleta,No fatal,45932
+11,Colisión con objeto fijo,No fatal,45732
+21,Salida del camino,No fatal,9596
+23,Volcadura,No fatal,9567
+13,Colisión con peatón (atropellamiento),No fatal,9407
+19,Otro,No fatal,4314
+5,Colisión con ciclista,No fatal,3758
+1,Caída de pasajero,No fatal,1562
+3,Colisión con animal,No fatal,913
+12,Colisión con peatón (atropellamiento),Fatal,810
+14,Colisión con vehículo automotor,Fatal,730
+8,Colisión con motocicleta,Fatal,643
+10,Colisión con objeto fijo,Fatal,528
+22,Volcadura,Fatal,479
+20,Salida del camino,Fatal,345
+17,Incendio,No fatal,287
+7,Colisión con ferrocarril,No fatal,224
+4,Colisión con ciclista,Fatal,121
+18,Otro,Fatal,105
+0,Caída de pasajero,Fatal,54
+2,Colisión con animal,Fatal,22
+6,Colisión con ferrocarril,Fatal,11
+16,Incendio,Fatal,1

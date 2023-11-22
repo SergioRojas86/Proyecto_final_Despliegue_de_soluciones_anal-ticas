@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ubuntu/proyecto_final/Sergio/Proyecto_final_Despliegue_de_soluciones_analiticas/codigo/mlruns/454363984461399917/aed5b3a7d1b94bf9b6cfc9039cb98957/artifacts
+end_time: 1700616768921
+entry_point_name: ''
+experiment_id: '454363984461399917'
+lifecycle_stage: active
+run_id: aed5b3a7d1b94bf9b6cfc9039cb98957
+run_name: Experimento_3 XGBoost
+run_uuid: aed5b3a7d1b94bf9b6cfc9039cb98957
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1700616762438
+status: 3
+tags: []
+user_id: ubuntu

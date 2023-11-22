@@ -247,8 +247,8 @@ def modelos(models_group, _model=None, n_estimators=None, max_samples=None, lear
 if __name__ == "__main__":
 
     # Lectura de los datos
-    df_initial = pd.read_csv('/home/ubuntu/proyecto_final_dsa/Sergio/data/atus_anual_2021.csv', index_col=False)
-    df_poblacion = pd.read_excel('/home/ubuntu/proyecto_final_dsa/Sergio/data/inafed_bd_1679023638.xlsx', index_col=False)
+    df_initial = pd.read_csv('/home/ubuntu/proyecto_final/Sergio/Proyecto_final_Despliegue_de_soluciones_analiticas/data/atus_anual_2021.csv', index_col=False)
+    df_poblacion = pd.read_excel('/home/ubuntu/proyecto_final/Sergio/Proyecto_final_Despliegue_de_soluciones_analiticas/data/inafed_bd_1679023638.xlsx', index_col=False)
     
     # Hacemos Join de las tablas de población y accidentes para clasificar por tipo de ciudad.
     df_initial['Cve_inegi'] = df_initial['ID_ENTIDAD']*1000 + df_initial.ID_MUNICIPIO
@@ -359,4 +359,9 @@ if __name__ == "__main__":
     #modelos(models_group, _model=None, n_estimators=None, max_samples=None, learning_rate=None, max_features=None, max_depth=None, threshold=None)
     #modelos(models_group, _model='Bagging', n_estimators=100, max_samples=None, learning_rate=None, max_features=None, max_depth=None, threshold=None)
     #modelos(models_group, _model='Gradient Boosting', n_estimators=None, max_samples=None, learning_rate=1.0, max_features=None, max_depth=1, threshold=None)
-    modelos(models_group, _model='XGBoost', n_estimators=None, max_samples=None, learning_rate=None, max_features=None, max_depth=None, threshold=0.5)
+    #modelos(models_group, _model='XGBoost', n_estimators=None, max_samples=None, learning_rate=None, max_features=None, max_depth=None, threshold=0.5)
+    #modelos(models_group, _model='XGBoost', n_estimators=50, max_samples=None, learning_rate=1.0, max_features=None, max_depth=None, threshold=None)
+    #modelos(models_group, _model='XGBoost', n_estimators=200, max_samples=None, learning_rate=None, max_features=None, max_depth=None, threshold=None)
+    #modelos(models_group, _model=None, n_estimators=200, max_samples=5, learning_rate=1.0, max_features=None, max_depth=5, threshold=None)
+    #modelos(models_group, _model='Bagging', n_estimators=100, max_samples=3, learning_rate=None, max_features=3, max_depth=None, threshold=None)
+    modelos(models_group, _model='Random Forest', n_estimators=None, max_samples=1.0, learning_rate=None, max_features=None, max_depth=3, threshold=None)

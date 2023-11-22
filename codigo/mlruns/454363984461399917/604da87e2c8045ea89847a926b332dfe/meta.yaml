@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ubuntu/proyecto_final/Sergio/Proyecto_final_Despliegue_de_soluciones_analiticas/codigo/mlruns/454363984461399917/604da87e2c8045ea89847a926b332dfe/artifacts
+end_time: 1700617967551
+entry_point_name: ''
+experiment_id: '454363984461399917'
+lifecycle_stage: active
+run_id: 604da87e2c8045ea89847a926b332dfe
+run_name: Experimento_2 Random Forest
+run_uuid: 604da87e2c8045ea89847a926b332dfe
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1700617960067
+status: 3
+tags: []
+user_id: ubuntu

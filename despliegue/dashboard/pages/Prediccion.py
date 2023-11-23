@@ -6,8 +6,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
-import pickle
-import random
+import joblib
 
 #libraries
 import dash
@@ -23,9 +22,6 @@ from .limpieza import limpiar_datos
 import base64
 import io
 
-seed = 123
-np.random.seed(seed)
-random.seed(seed)
 
 
 # dash-labs plugin call, menu name and route
@@ -414,8 +410,8 @@ def update_output(n_clicks, selected_date, selected_time, id_municipio, id_estad
 
     clean_data = limpiar_datos(df_respuestas)
 
-    with open('pages/GBC.pkl', 'rb') as file:
-        modelo = pickle.load(file)
+    file = 'pages/GBC_pred.joblib'
+    modelo = joblib.load(file)
 
     resultado_predict = modelo.predict_proba(clean_data)[:, 1] * 100 
 

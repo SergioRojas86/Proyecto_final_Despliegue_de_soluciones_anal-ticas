@@ -409,6 +409,7 @@ def update_output(n_clicks, selected_date, selected_time, id_municipio, id_estad
     df_respuestas = pd.DataFrame(np.column_stack(list_respuestas),columns=Lista_col) 
 
     clean_data = limpiar_datos(df_respuestas)
+    clean_data = clean_data.values.reshape(1, -1)
 
     with open('pages/GBC.pkl', 'rb') as file:
         modelo = pickle.load(file)

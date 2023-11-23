@@ -279,9 +279,9 @@ layout = html.Div([
     ]
 )
 def update_output(n_clicks, selected_date, selected_time, id_municipio, id_estado, zona_urbana, 
-                  zona_suburbana, tipo_accidente, causa_accidente, automoviles, camionetas, Microbuses, camiones, 
+                  zona_suburbana, tipo_accidente, automoviles, camionetas, Microbuses, camiones, 
                   omnibuses, tranvias, camionetas_carga, camiones_de_carga, tractores, ferrocarril, 
-                  motocicleta, bicicleta, otros_vehiculos, superficie_rodamiento, sexo, aliento, 
+                  motocicleta, bicicleta, otros_vehiculos, causa_accidente, superficie_rodamiento, sexo, aliento, 
                   cinturon_seguridad, edad_conductor):
     
     #Consolidado de respuestas

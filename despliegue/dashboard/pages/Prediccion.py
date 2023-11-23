@@ -7,6 +7,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
 import pickle
+import random
 
 #libraries
 import dash
@@ -21,6 +22,10 @@ from .limpieza import limpiar_datos
 
 import base64
 import io
+
+seed = 123
+np.random.seed(seed)
+random.seed(seed)
 
 
 # dash-labs plugin call, menu name and route

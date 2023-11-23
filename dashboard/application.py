@@ -7,9 +7,9 @@ from dash import Input, Output, dcc, html
 import dash_auth
 #from dash.dependencies import Input, Ouput, State
 
-VALID_USERNAME_PASSWORD_PAIRS = {
-    'GACS': 'GACS'
-}
+# VALID_USERNAME_PASSWORD_PAIRS = {
+#    'GACS': 'GACS'
+#}
 
 #Images of this page
 Uniandes_logo = "https://github.com/Andresbeltran200/logo_despliegue_dash/blob/main/Uniandes.png?raw=true"
@@ -23,10 +23,10 @@ app = dash.Dash(
     external_stylesheets=[dbc.themes.MORPH, dbc.icons.FONT_AWESOME],
     requests_pathname_prefix=request_path_prefix
 )
-auth = dash_auth.BasicAuth(
-    app,
-    VALID_USERNAME_PASSWORD_PAIRS
-)
+#auth = dash_auth.BasicAuth(
+#    app,
+#    VALID_USERNAME_PASSWORD_PAIRS
+#)
  
 #Title of Main Page
 logo = html.Div(

@@ -407,12 +407,12 @@ def update_output(n_clicks, selected_date, selected_time, id_municipio, id_estad
     
     df_respuestas = pd.DataFrame(np.column_stack(list_respuestas),columns=Lista_col) 
 
-    #clean_data = limpiar_datos(df_respuestas)
+    clean_data = limpiar_datos(df_respuestas)
 
-    #with open('GBC.pkl', 'rb') as file:
-    #    modelo = pickle.load(file)
+    with open('GBC.pkl', 'rb') as file:
+        modelo = pickle.load(file)
 
-    #resultado_prediccion = modelo.predict_proba(df_respuestas)[:, 1] * 100 
+    resultado_predict = modelo.predict_proba(clean_data)[:, 1] * 100 
 
     print("resultado")   
     
@@ -435,7 +435,8 @@ def update_output(n_clicks, selected_date, selected_time, id_municipio, id_estad
     
     # Lógica de predicción (puedes cambiar esto según tu implementación real)
     
-    resultado_prediccion = 27.75 +10 # Esto debe ser tu resultado de la predicción
+    #resultado_prediccion = 27.75 +10 # Esto debe ser tu resultado de la predicción
+    resultado_prediccion = resultado_predict
     
     return f"Resultado de la predicción: {resultado_prediccion:.2f}%" , download_link
 

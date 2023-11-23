@@ -7,6 +7,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
 import joblib
+import random
 
 #libraries
 import dash
@@ -405,7 +406,11 @@ def update_output(n_clicks, selected_date, selected_time, id_municipio, id_estad
     'NEHERIDO',
     'CLASACC',
     'ESTATUS']
-    
+
+    seed = 123
+    np.random.seed(seed)
+    random.seed(seed)
+
     df_respuestas = pd.DataFrame(np.column_stack(list_respuestas),columns=Lista_col) 
 
     clean_data = limpiar_datos(df_respuestas)

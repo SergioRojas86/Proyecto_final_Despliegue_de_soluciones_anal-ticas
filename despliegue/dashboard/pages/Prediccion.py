@@ -17,7 +17,7 @@ from xarray import align
 from datetime import datetime as dt
 from dash.exceptions import PreventUpdate
 
-from limpieza import limpiar_datos
+from .limpieza import limpiar_datos
 
 import base64
 import io

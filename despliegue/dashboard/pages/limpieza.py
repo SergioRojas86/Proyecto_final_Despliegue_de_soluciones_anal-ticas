@@ -1,9 +1,58 @@
 from sklearn.model_selection import train_test_split
 import pandas as pd
 
+def pareto_entry(_col,_df):
+    cuenta = []
+    unicos = []
+    porcentaje = []
+    for i in list(_df[_col].unique()):
+        tempy = pd.DataFrame(_df[_col])
+        cuenta.append(tempy[tempy[_col]==i].count()[0])
+        unicos.append(i)
+        porcentaje.append(round(tempy[tempy[_col]==i].count()[0]/len(_df),3)*100)
+
+    pareto_df = pd.DataFrame(unicos, columns=[_col])
+    pareto_df['Count'] = cuenta
+    pareto_df['Percentage'] = porcentaje
+    pareto_df = pareto_df.sort_values(by=['Count'], ascending=False)
+    pareto_df['Cum_Percentage'] = round(100*(pareto_df['Count'].cumsum()/pareto_df['Count'].sum()),1)
+
+    return pareto_df
+
+def crear_calidad(_df):
+    completitud = []
+    for i in list(_df.columns):
+        vacios = _df[(_df[i]=="")|(_df[i].isna())]
+        count_vacios = vacios[i].count()
+        medida = round((1-(count_vacios/len(_df)))*100)
+        completitud.append([i,medida])
+
+    calidad_df = pd.DataFrame(completitud, columns = ['Columna','Completitud de Col(%)'])
+    unicidad=[]
+    distintivo=[]
+    type_col = []
+    Moda= []
+    for j in list(_df.columns):
+        unico = len(_df[_df[j].duplicated()==False])
+        temp_df = _df[_df[j].duplicated()==True]
+        distinto = len(temp_df[j].unique())
+        unicidad.append(unico-distinto)
+        distintivo.append(distinto)
+        type_col.append(_df[j].dtypes)
+        Moda.append(_df[j].mode()[0])
+
+    calidad_df['# Unicos']=unicidad
+    calidad_df['# Distintos']=distintivo
+    calidad_df['Tipo de Columna']=type_col
+    calidad_df['Moda']=Moda
+
+    return calidad_df
+
 def limpiar_datos(df_initial_m):
-    df_initial_m = df_initial_m.drop(['ID_ENTIDAD','ANIO','ID_MINUTO','NEMUERTO','NEHERIDO','COBERTURA','ESTATUS','id','id_estado','id_municipio','Estado','Municipio',
-                                    'total','Hombres','Mujeres','ID_Mun'],axis=1)
+    #df_initial_m = df_initial_m.drop(['ID_ENTIDAD','ANIO','ID_MINUTO','NEMUERTO','NEHERIDO','COBERTURA','ESTATUS','id','id_estado','id_municipio','Estado','Municipio',
+    #                                'total','Hombres','Mujeres','ID_Mun'],axis=1)
+
+    df_initial_m = df_initial_m.drop(['ID_ENTIDAD','ANIO','ID_MINUTO','NEMUERTO','NEHERIDO','COBERTURA','ESTATUS'],axis=1)
 
 
     df_initial_m = df_initial_m.drop([i for i in list(df_initial_m.columns) if "MUERTO" in i],axis=1)

@@ -409,7 +409,7 @@ def update_output(n_clicks, selected_date, selected_time, id_municipio, id_estad
 
     clean_data = limpiar_datos(df_respuestas)
 
-    with open('GBC.pkl', 'rb') as file:
+    with open('pages/GBC.pkl', 'rb') as file:
         modelo = pickle.load(file)
 
     resultado_predict = modelo.predict_proba(clean_data)[:, 1] * 100 

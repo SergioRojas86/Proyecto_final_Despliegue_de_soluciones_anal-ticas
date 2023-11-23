@@ -91,8 +91,6 @@ def limpiar_datos(df_initial_m):
     #Unimos las columnas dummies a las columnas numericas
     df_initial_final = df_initial_dummies.join(df_initial_con,how="inner")
 
-    df_initial_final = df_initial_final.drop(['ID_MUNICIPIO','Cve_inegi'],axis=1)
-
     # Separar las variables predictoras de la variable de respuesta
     yTotal = df_initial_final.pop('CLASACC').to_numpy()
     XTotal = df_initial_final.to_numpy()

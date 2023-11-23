@@ -92,7 +92,6 @@ def limpiar_datos(df_initial_m):
     df_initial_final = df_initial_dummies.join(df_initial_con,how="inner")
 
     # Separar las variables predictoras de la variable de respuesta
-    yTotal = df_initial_final.pop('CLASACC').to_numpy()
     XTotal = df_initial_final.to_numpy()
 
     return XTotal

@@ -48,8 +48,8 @@ def crear_calidad(_df):
     
 def limpiar_datos(df):
     # Lectura de los datos
-    df_atus = pd.read_csv('atus_anual_2021.csv', index_col=False)
-    df_poblacion = pd.read_excel('inafed_bd_1679023638.xlsx', index_col=False)
+    df_atus = pd.read_csv('pages/atus_anual_2021.csv', index_col=False)
+    df_poblacion = pd.read_excel('pages/inafed_bd_1679023638.xlsx', index_col=False)
 
     df_initial = pd.concat([df_atus, df], ignore_index=True)
 

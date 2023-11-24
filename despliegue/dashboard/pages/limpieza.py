@@ -63,13 +63,10 @@ def limpiar_datos(df_initial_m):
 
 
     df_initial_mcopy = df_initial_m.copy()
-    print('df_initial_mcopy', df_initial_mcopy)
     #Transformación de variables dummies
     desc_cat = crear_calidad(df_initial_mcopy)
     desc_cat = desc_cat[desc_cat['Tipo de Columna']=='object']
-    print('desc_cat',desc_cat)
     df_initial_cat = df_initial_m[desc_cat.Columna.unique()]
-    print('df_initial_cat',df_initial_cat)
 
     #Todas las variables categoricas las convertimos en variables dummies y las adjuntamos en una lista
     todas_dummies = []
@@ -83,7 +80,8 @@ def limpiar_datos(df_initial_m):
         column_tuple = list(column_index)
         y = pd.DataFrame(x.values,index=x.index,columns=column_tuple)
         todas_dummies.append(y)
-
+    
+    print('todas_dummies',todas_dummies)
     df_initial_dummies = pd.concat([i for i in todas_dummies], axis=1)
 
     desc_con = crear_calidad(df_initial_m)

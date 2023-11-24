@@ -11,6 +11,8 @@ ADD ./dashboard /opt/dashboard/
 RUN pip install --upgrade pip
 RUN pip install -r /opt/dashboard/requirements.txt
 
+# Hacer el directorio de trabajo ejecutable 
+RUN chmod +x /opt/dashboard/application.py
 # Cambiar propiedad de la carpeta a api-user 
 RUN chown -R api-user:api-user ./
 

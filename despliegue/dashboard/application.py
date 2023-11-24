@@ -129,4 +129,6 @@ application = app.server
 
 # Testing server, don't use in production, host
 if __name__ == "__main__":
-    application.run(host='0.0.0.0', port=8050)
+    #application.run(host='0.0.0.0', port=8050)
+    import gunicorn
+    gunicorn application -b 0.0.0.0:8050

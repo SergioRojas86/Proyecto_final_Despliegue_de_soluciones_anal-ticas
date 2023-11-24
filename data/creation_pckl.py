@@ -126,11 +126,9 @@ yTotal = df_initial_final.pop('CLASACC').to_numpy()
 XTotal = df_initial_final.to_numpy()
 
 # obtener las muestras
-XTrain, XTest, yTrain, yTest = train_test_split(XTotal, yTotal, test_size=0.33)
+XTrain, XTest, yTrain, yTest = train_test_split(XTotal, yTotal, test_size=0.20)
 
-#model = GradientBoostingClassifier(learning_rate=0.1, max_depth=3, n_estimators=100)
-#model = GradientBoostingClassifier()
-model = XGBClassifier()
+model = GradientBoostingClassifier(learning_rate=0.1, max_depth=3, n_estimators=100)
 
 model.fit(XTrain, yTrain)
 

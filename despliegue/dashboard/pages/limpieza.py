@@ -44,7 +44,7 @@ def limpiar_datos(df):
     df_resultado = pd.DataFrame([diccionario_actualizado])
 
     # Obtener el array de valores
-    array_resultado = df_resultado.values[0]
+    array_resultado = df_resultado.to_numpy()
 
     # Imprimir el array de valores
     array_resultado

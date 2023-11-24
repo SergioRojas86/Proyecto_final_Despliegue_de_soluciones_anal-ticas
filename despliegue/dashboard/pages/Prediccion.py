@@ -205,18 +205,6 @@ layout = html.Div([
         ],
         value='Se ignora'
     )]),
-
-    dbc.Row([html.Label("Clasificación lugar"),    
-    dcc.Dropdown(
-        id='dropdown-cinturon_seguridad',
-        options=[
-            {'label': 'Ciudad Grande', 'value': 'Ciudad Grande'},
-            {'label': 'Ciudad', 'value': 'Ciudad'},
-             {'label': 'Municipio', 'value': 'Municipio'},
-          # Agrega más opciones según sea necesario
-        ],
-        value='Municipio'
-    )]),
     
     dbc.Row([html.Label('Escriba la edad de conductor:'),
     dcc.Input(id='input-edad_conductor', type='number', value=0)
@@ -341,7 +329,7 @@ def update_output(n_clicks, selected_date, selected_time, id_municipio, id_estad
         superficie_rodamiento,
         sexo, 
         aliento,
-        cinturon_seguridad, 
+        cinturon_seguridad,
         edad_conductor,
         0,
         0,
@@ -407,7 +395,6 @@ def update_output(n_clicks, selected_date, selected_time, id_municipio, id_estad
     df_respuestas = pd.DataFrame(np.column_stack(list_respuestas),columns=Lista_col) 
 
     clean_data = limpiar_datos(df_respuestas)
-    #clean_data = clean_data.reshape(1, -1)
 
     with open('pages/GBC.pkl', 'rb') as file:
         modelo = pickle.load(file)
@@ -437,5 +424,5 @@ def update_output(n_clicks, selected_date, selected_time, id_municipio, id_estad
     
     #resultado_prediccion = 27.75 +10 # Esto debe ser tu resultado de la predicción
     
-    return f"Resultado de la predicción: {float(floatresultado_predict):.2f}%" , download_link 
+    return f"Resultado de la predicción: {float(resultado_predict):.2f}%" , download_link 
 

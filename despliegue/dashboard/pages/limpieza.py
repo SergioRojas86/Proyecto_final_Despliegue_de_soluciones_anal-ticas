@@ -65,7 +65,8 @@ def limpiar_datos(df):
     df_poblacion = df_poblacion_D
     df_initial_m = df_initial.merge(df_poblacion, on='Cve_inegi', how='left')
 
-
+    print(len(df_initial_m))
+    print(df_initial_m.columns)
 
     # Eliminamos variables que no ofrecen información relevante para el objeto de estudio
     # como ID_Entidad que es la codificación del instituto y Anio ya que la información

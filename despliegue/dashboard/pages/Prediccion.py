@@ -61,7 +61,7 @@ layout = html.Div([
         id='dropdown-zona_urbana',
         options=[
             {'label': 'Accidente en intersección', 'value': 'Accidente en intersección' },
-            {'label': 'Accidente en intersección', 'value': 'Accidente en no intersección' },
+            {'label': 'Accidente en no intersección', 'value': 'Accidente en no intersección' },
             {'label': 'No fue en Intesección', 'value': 'Sin accidente en esta zona'}
             # Agrega más opciones según sea necesario
         ],
@@ -431,7 +431,5 @@ def update_output(n_clicks, selected_date, selected_time, id_municipio, id_estad
     
     # Lógica de predicción (puedes cambiar esto según tu implementación real)
     
-    #resultado_prediccion = 27.75 +10 # Esto debe ser tu resultado de la predicción
-    
-    return f"El accidente tiene una probabilidad del: {float(resultado_predict[:, 1] * 100 ):.2f}% de ser fatal" , download_link 
+    return f"El accidente tiene una probabilidad del {float(resultado_predict[:, 1] * 100 ):.2f}% de ser fatal" , download_link 
 

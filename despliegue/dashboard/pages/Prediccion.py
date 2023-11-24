@@ -60,42 +60,38 @@ layout = html.Div([
     dcc.Dropdown(
         id='dropdown-zona_urbana',
         options=[
-            {'label': 'En zona suburbana', 'value': 'En zona suburbana'},
-            {'label': 'En Intersecciòn', 'value': 'En Intersecciòn' },
-            {'label': 'No fue en Intesección', 'value': 'No fue en Intesección'},
+            {'label': 'Accidente en intersección', 'value': 'Accidente en intersección' },
+            {'label': 'No fue en Intesección', 'value': 'Sin accidente en esta zona'},
             # Agrega más opciones según sea necesario
         ],
-        value= 'En zona suburbana'
+        value= 'Accidente en intersección'
     )]),
     dbc.Row([html.Label("Zona Suburbana"),    
     dcc.Dropdown(
         id='dropdown-zona_suburbana',
         options=[
-            {'label': 'Evento vial en zona urbana', 'value': 'Evento vial en zona urbana'},
-            {'label': 'Camino rural', 'value': 'Camino rural'},
-            {'label': 'Carretera estatal', 'value': 'Carretera estatal'},
-            {'label': 'Otro Camino', 'value': 'Otro Camino'},
+            {'label': 'Sin accidente en esta zona', 'value': 'Sin accidente en esta zona'},
+            {'label': 'Accidente en carretera estatal', 'value': 'Accidente en carretera estatal'},
+            {'label': 'Accidente en camino rural', 'value': 'Accidente en camino rural'},
             # Agrega más opciones según sea necesario
         ],
-        value='Evento vial en zona urbana'
+        value='Sin accidente en esta zona'
     )]),
     dbc.Row([html.Label("Tipo de accidente"),    
     dcc.Dropdown(
         id='dropdown-tipo_accidente',
         options=[
-            {'label': 'Certificado cero', 'value': 'Certificado cero'},
             {'label': 'Colisión con vehículo automotor', 'value': 'Colisión con vehículo automotor'},
-            {'label': 'Colisión con peaton', 'value': 'Colisión con peaton'},
-            {'label': 'Colisión con animal', 'value': 'Colisión con animal'},
+            {'label': 'Colisión con motocicleta', 'value': 'Colisión con motocicleta'},
             {'label': 'Colisión con objeto fijo', 'value': 'Colisión con objeto fijo'},
+            {'label': 'Colisión con peatón (atropellamiento)', 'value': 'Colisión con peatón (atropellamiento)'},
             {'label': 'Volcadura', 'value': 'Volcadura'},
-            {'label': 'Caída de pasajero', 'value': 'Caída de pasajero'},
-            {'label': 'Salida de camión', 'value': 'Salida de camión'},
-            {'label': 'Incendio', 'value': 'Incendio'},
-            {'label': 'Colisión con ferrocarril', 'value': 'Colisión con ferrocarril'},
-            {'label': 'Colisión con motocicleta','value':  'Colisión con motocicleta'},
-            {'label': 'Colisión con ciclista', 'value': 'Colisión con ciclista'},
+            {'label': 'Salida del camino', 'value': 'Salida del camino'},
             {'label': 'Otro', 'value': 'Otro'},
+            {'label': 'Colisión con ciclista', 'value': 'Colisión con ciclista'},
+            {'label': 'Caída de pasajero', 'value': 'Caída de pasajero'},
+            {'label': 'Colisión con animal', 'value': 'Colisión con animal'},
+            {'label': 'Incendio', 'value': 'Incendio'},
             # Agrega más opciones según sea necesario
         ],
         value='Colisión con vehículo automotor'
@@ -104,9 +100,7 @@ layout = html.Div([
     dcc.Dropdown(
         id='dropdown-causa_accidente',
         options=[
-            {'label': 'Certificado cero', 'value': 'Certificado cero'},
             {'label': 'Conductor', 'value': 'Conductor'},
-            {'label': 'Peaton o pasajero', 'value': 'Peaton o pasajero'},
             {'label': 'Falla de vehículo', 'value': 'Falla de vehículo'},
             {'label': 'Mala condición del camino', 'value': 'Mala condición del camino'},
             {'label': 'Otra', 'value': 'Otra'},
@@ -171,13 +165,11 @@ layout = html.Div([
     dcc.Dropdown(
         id='dropdown-superficie_rodamiento',
         options=[
-            {'label': 'Certificado cero', 'value': 'Certificado cero'},
             {'label': 'Pavimentada', 'value': 'Pavimentada'},
-            {'label': 'No Pavimentada', 'value': 'No Pavimentada'},
      
           # Agrega más opciones según sea necesario
         ],
-        value='Certificado cero'
+        value='Pavimentada'
     )]),    
     
     
@@ -185,8 +177,6 @@ layout = html.Div([
     dcc.Dropdown(
         id='dropdown-sexo',
         options=[
-            {'label': 'Certificado cero', 'value': 'Certificado cero'},
-            {'label': 'Se fugó', 'value': 'Se fugó'},
             {'label': 'Hombre', 'value': 'Hombre'},
             {'label': 'Mujer', 'value': 'Mujer'},
           # Agrega más opciones según sea necesario
@@ -198,26 +188,34 @@ layout = html.Div([
     dcc.Dropdown(
         id='dropdown-Aliento',
         options=[
-            {'label': 'Certificado cero', 'value': 'Certificado cero'},
-            {'label': 'Si', 'value': 'Si'},
             {'label': 'No', 'value': 'No'},
             {'label': 'Se ignora', 'value': 'Se ignora'},
           # Agrega más opciones según sea necesario
         ],
-        value='Certificado cero'
+        value='Se ignora'
     )]),
     
     dbc.Row([html.Label("Cinturon de seguridad"),    
     dcc.Dropdown(
         id='dropdown-cinturon_seguridad',
         options=[
-            {'label': 'Certificado cero', 'value': 'Certificado cero'},
             {'label': 'Si', 'value': 'Si'},
-            {'label': 'No', 'value': 'No'},
             {'label': 'Se ignora', 'value': 'Se ignora'},
           # Agrega más opciones según sea necesario
         ],
-        value='Certificado cero'
+        value='Se ignora'
+    )]),
+
+    dbc.Row([html.Label("Clasificación lugar"),    
+    dcc.Dropdown(
+        id='dropdown-cinturon_seguridad',
+        options=[
+            {'label': 'Ciudad Grande', 'value': 'Ciudad Grande'},
+            {'label': 'Ciudad', 'value': 'Ciudad'},
+             {'label': 'Municipio', 'value': 'Municipio'},
+          # Agrega más opciones según sea necesario
+        ],
+        value='Municipio'
     )]),
     
     dbc.Row([html.Label('Escriba la edad de conductor:'),

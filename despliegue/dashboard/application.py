@@ -130,5 +130,7 @@ application = app.server
 # Testing server, don't use in production, host
 if __name__ == "__main__":
     #application.run(host='0.0.0.0', port=8050)
-    import gunicorn
-    gunicorn application -b 0.0.0.0:8050
+    import uvicorn
+
+    # ejecución del servidor - host para ejecutar en servidor 
+    uvicorn.run(application, host="0.0.0.0", port=8050, log_level="debug")

@@ -399,9 +399,9 @@ def update_output(n_clicks, selected_date, selected_time, id_municipio, id_estad
     with open('pages/GBC.pkl', 'rb') as file:
         modelo = pickle.load(file)
 
-    resultado_predict = modelo.predict_proba(clean_data)[:, 1] * 100 
+    resultado_predict = modelo.predict_proba(clean_data)
 
-    print("resultado")   
+    print(resultado_predict)   
     
     if n_clicks is None:
         raise PreventUpdate
@@ -424,5 +424,5 @@ def update_output(n_clicks, selected_date, selected_time, id_municipio, id_estad
     
     #resultado_prediccion = 27.75 +10 # Esto debe ser tu resultado de la predicción
     
-    return f"Resultado de la predicción: {float(resultado_predict):.2f}%" , download_link 
+    return f"Resultado de la predicción: {float(resultado_predict[:, 1] * 100 ):.2f}%" , download_link 
 

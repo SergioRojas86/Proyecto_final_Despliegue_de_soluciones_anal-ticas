@@ -61,7 +61,8 @@ layout = html.Div([
         id='dropdown-zona_urbana',
         options=[
             {'label': 'Accidente en intersección', 'value': 'Accidente en intersección' },
-            {'label': 'No fue en Intesección', 'value': 'Sin accidente en esta zona'},
+            {'label': 'Accidente en intersección', 'value': 'Accidente en no intersección' },
+            {'label': 'No fue en Intesección', 'value': 'Sin accidente en esta zona'}
             # Agrega más opciones según sea necesario
         ],
         value= 'Accidente en intersección'
@@ -73,6 +74,7 @@ layout = html.Div([
             {'label': 'Sin accidente en esta zona', 'value': 'Sin accidente en esta zona'},
             {'label': 'Accidente en carretera estatal', 'value': 'Accidente en carretera estatal'},
             {'label': 'Accidente en camino rural', 'value': 'Accidente en camino rural'},
+            {'label': 'Accidentes en otro camino', 'value': 'Accidentes en otro camino'}
             # Agrega más opciones según sea necesario
         ],
         value='Sin accidente en esta zona'
@@ -92,6 +94,7 @@ layout = html.Div([
             {'label': 'Caída de pasajero', 'value': 'Caída de pasajero'},
             {'label': 'Colisión con animal', 'value': 'Colisión con animal'},
             {'label': 'Incendio', 'value': 'Incendio'},
+            {'label': 'Colisión con ferrocarril', 'value': 'Colisión con ferrocarril'}
             # Agrega más opciones según sea necesario
         ],
         value='Colisión con vehículo automotor'
@@ -104,6 +107,7 @@ layout = html.Div([
             {'label': 'Falla de vehículo', 'value': 'Falla de vehículo'},
             {'label': 'Mala condición del camino', 'value': 'Mala condición del camino'},
             {'label': 'Otra', 'value': 'Otra'},
+            {'label': 'Peatón o pasajero', 'value': 'Peatón o pasajero'}
           # Agrega más opciones según sea necesario
         ],
         value='Conductor'
@@ -165,8 +169,8 @@ layout = html.Div([
     dcc.Dropdown(
         id='dropdown-superficie_rodamiento',
         options=[
-            {'label': 'Pavimentada', 'value': 'Pavimentada'},
-     
+            {'label': 'No Pavimentada', 'value': 'No Pavimentada'},
+            {'label': 'Pavimentada', 'value': 'Pavimentada'}
           # Agrega más opciones según sea necesario
         ],
         value='Pavimentada'
@@ -179,6 +183,7 @@ layout = html.Div([
         options=[
             {'label': 'Hombre', 'value': 'Hombre'},
             {'label': 'Mujer', 'value': 'Mujer'},
+            {'label': 'Se fugó', 'value': 'Se fugó'}
           # Agrega más opciones según sea necesario
         ],
         value='Mujer'
@@ -190,6 +195,7 @@ layout = html.Div([
         options=[
             {'label': 'No', 'value': 'No'},
             {'label': 'Se ignora', 'value': 'Se ignora'},
+            {'label': 'Sí', 'value': 'Sí'}
           # Agrega más opciones según sea necesario
         ],
         value='Se ignora'
@@ -199,8 +205,9 @@ layout = html.Div([
     dcc.Dropdown(
         id='dropdown-cinturon_seguridad',
         options=[
-            {'label': 'Si', 'value': 'Si'},
+            {'label': 'Sí', 'value': 'Sí'},
             {'label': 'Se ignora', 'value': 'Se ignora'},
+            {'label': 'No', 'value': 'No'}
           # Agrega más opciones según sea necesario
         ],
         value='Se ignora'

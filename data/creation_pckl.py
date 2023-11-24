@@ -101,8 +101,8 @@ df_initial_cat = df_initial_m[desc_cat.Columna.unique()]
 todas_dummies = []
 for i in list(df_initial_cat.columns):
     x = pd.get_dummies(df_initial_cat[i])
-    x = x[pareto_entry(i,df_initial_cat)[i].unique()]
-    x = x.iloc[:,:-1]
+    #x = x[pareto_entry(i,df_initial_cat)[i].unique()]
+    #x = x.iloc[:,:-1]
     column_index = []
     for j in list(x.columns):
         column_index.append((i,j))

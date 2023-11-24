@@ -1,6 +1,7 @@
 from sklearn.ensemble import GradientBoostingClassifier
 from xgboost import XGBClassifier
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.tree import DecisionTreeClassifier
 import pickle
 from sklearn.model_selection import train_test_split
 import pandas as pd
@@ -129,7 +130,7 @@ XTotal = df_initial_final.to_numpy()
 # obtener las muestras
 XTrain, XTest, yTrain, yTest = train_test_split(XTotal, yTotal, test_size=0.20)
 
-model = RandomForestClassifier(n_estimators=100)
+model = DecisionTreeClassifier(max_depth=5)
 
 model.fit(XTrain, yTrain)
 

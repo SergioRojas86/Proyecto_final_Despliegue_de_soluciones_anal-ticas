@@ -127,7 +127,8 @@ XTotal = df_initial_final.to_numpy()
 # obtener las muestras
 XTrain, XTest, yTrain, yTest = train_test_split(XTotal, yTotal, test_size=0.33, random_state=123)
 
-model = GradientBoostingClassifier(learning_rate=0.1, max_depth=3, n_estimators=100)
+#model = GradientBoostingClassifier(learning_rate=0.1, max_depth=3, n_estimators=100)
+model = GradientBoostingClassifier()
 
 model.fit(XTrain, yTrain)
 

@@ -65,9 +65,6 @@ def limpiar_datos(df):
     df_poblacion = df_poblacion_D
     df_initial_m = df_initial.merge(df_poblacion, on='Cve_inegi', how='left')
 
-    print(len(df_initial_m))
-    print(df_initial_m.columns)
-
     # Eliminamos variables que no ofrecen información relevante para el objeto de estudio
     # como ID_Entidad que es la codificación del instituto y Anio ya que la información
     # se conoce con antelación que es del año 2021. Dado que la variable objetivo del estudio
@@ -86,6 +83,9 @@ def limpiar_datos(df):
 
 
     df_initial_mcopy = df_initial_m.copy()
+
+    print(len(df_initial_mcopy))
+    print(df_initial_mcopy.columns)
 
     #Transformación de variables dummies
     desc_cat = crear_calidad(df_initial_mcopy)

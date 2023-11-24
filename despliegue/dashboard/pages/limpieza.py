@@ -53,6 +53,8 @@ def limpiar_datos(df):
 
     df_initial = pd.concat([df_atus, df], ignore_index=True)
 
+    print(df_initial.dtypes)
+
     # Hacemos Join de las tablas de población y accidentes para clasificar por tipo de ciudad.
     df_initial['Cve_inegi'] = df_initial['ID_ENTIDAD']*1000 + df_initial.ID_MUNICIPIO
 
@@ -89,6 +91,7 @@ def limpiar_datos(df):
     desc_cat = desc_cat[desc_cat['Tipo de Columna']=='object']
     df_initial_cat = df_initial_m[desc_cat.Columna.unique()]
 
+    print(desc_cat)
     print(len(df_initial_cat))
     print(df_initial_cat.columns)
 

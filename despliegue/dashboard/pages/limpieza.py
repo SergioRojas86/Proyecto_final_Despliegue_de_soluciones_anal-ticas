@@ -46,13 +46,13 @@ def limpiar_datos(df_initial_m):
     #Todas las variables categoricas las convertimos en variables dummies y las adjuntamos en una lista
     todas_dummies = []
     for i in list(desc_cat.columns):
-    x = pd.get_dummies(desc_cat[i])
-    column_index = []
-    for j in list(x.columns):
-        column_index.append((i,j))
-    column_tuple = list(column_index)
-    y = pd.DataFrame(x.values,index=x.index,columns=column_tuple)
-    todas_dummies.append(y)
+        x = pd.get_dummies(desc_cat[i])
+        column_index = []
+        for j in list(x.columns):
+            column_index.append((i,j))
+        column_tuple = list(column_index)
+        y = pd.DataFrame(x.values,index=x.index,columns=column_tuple)
+        todas_dummies.append(y)
     
     df_initial_dummies = pd.concat([i for i in todas_dummies], axis=1)
 

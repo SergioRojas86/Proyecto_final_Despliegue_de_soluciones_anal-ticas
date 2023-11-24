@@ -53,6 +53,16 @@ def limpiar_datos(df):
 
     df_initial = pd.concat([df_atus, df], ignore_index=True)
 
+    # Lista de columnas que deben convertirse a enteros
+    columnas_enteros = ['ID_ENTIDAD', 'ID_MUNICIPIO', 'ANIO', 'MES', 'ID_HORA', 'ID_MINUTO', 'ID_DIA',
+                    'AUTOMOVIL', 'CAMPASAJ', 'MICROBUS', 'PASCAMION', 'OMNIBUS', 'TRANVIA', 'CAMIONETA',
+                    'CAMION', 'TRACTOR', 'FERROCARRI', 'MOTOCICLET', 'BICICLETA', 'OTROVEHIC', 'ID_EDAD',
+                    'CONDMUERTO', 'CONDHERIDO', 'PASAMUERTO', 'PASAHERIDO', 'PEATMUERTO', 'PEATHERIDO',
+                    'CICLMUERTO', 'CICLHERIDO', 'OTROMUERTO', 'OTROHERIDO', 'NEMUERTO', 'NEHERIDO']
+
+    # Convertir columnas a tipo int64
+    df_initial[columnas_enteros] = df_initial[columnas_enteros].astype('int64')
+
     print(df_initial.dtypes)
 
     # Hacemos Join de las tablas de población y accidentes para clasificar por tipo de ciudad.

@@ -89,10 +89,10 @@ def limpiar_datos(df_initial_m):
     df_initial_con = df_initial_m[desc_con.Columna.unique()]
 
     #Unimos las columnas dummies a las columnas numericas
-    df_initial_final = df_initial_dummies.join(df_initial_con,how="inner")
+    df_initial_final = df_initial_dummies #.join(df_initial_con,how="inner")
 
     # Separar las variables predictoras de la variable de respuesta
     XTotal = df_initial_final.to_numpy()
-    print(df_initial_con)
+    print(XTotal)
 
     return XTotal

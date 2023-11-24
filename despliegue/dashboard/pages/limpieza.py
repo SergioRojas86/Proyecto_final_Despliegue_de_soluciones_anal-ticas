@@ -84,13 +84,13 @@ def limpiar_datos(df):
 
     df_initial_mcopy = df_initial_m.copy()
 
-    print(len(df_initial_mcopy))
-    print(df_initial_mcopy.columns)
-
     #Transformación de variables dummies
     desc_cat = crear_calidad(df_initial_mcopy)
     desc_cat = desc_cat[desc_cat['Tipo de Columna']=='object']
     df_initial_cat = df_initial_m[desc_cat.Columna.unique()]
+
+    print(len(df_initial_cat))
+    print(df_initial_cat.columns)
 
     #Todas las variables categoricas las convertimos en variables dummies y las adjuntamos en una lista
     todas_dummies = []

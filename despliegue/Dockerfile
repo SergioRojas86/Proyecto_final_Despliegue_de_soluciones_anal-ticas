@@ -11,8 +11,6 @@ ADD ./dashboard /opt/dashboard/
 RUN pip install --upgrade pip
 RUN pip install -r /opt/dashboard/requirements.txt
 
-# Hacer el directorio de trabajo ejecutable 
-RUN chmod +x /opt/dashboard/run.sh
 # Cambiar propiedad de la carpeta a api-user 
 RUN chown -R api-user:api-user ./
 
@@ -21,4 +19,4 @@ USER api-user
 EXPOSE 8050
 
 # Comandos a ejecutar al correr el contenedor 
-CMD ["bash", "./run.sh"]
+CMD ["python", "application.py"]

@@ -400,8 +400,10 @@ def update_output(n_clicks, selected_date, selected_time, id_municipio, id_estad
         modelo = pickle.load(file)
 
     resultado_predict = modelo.predict_proba(clean_data)
+    predictions = modelo.predict(clean_data)
 
-    print(resultado_predict)   
+    print(resultado_predict)
+    print(predictions) 
     
     if n_clicks is None:
         raise PreventUpdate

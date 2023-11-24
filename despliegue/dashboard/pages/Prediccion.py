@@ -355,8 +355,8 @@ def update_output(n_clicks, selected_date, selected_time, id_municipio, id_estad
         0,
         0,
         0,
-        "NA",
-        "NA"
+        "Fatal",
+        "Cifras Definitivas"
         ]
     Lista_col = ['COBERTURA',
     'ID_ENTIDAD',

@@ -1,12 +1,24 @@
 import pandas as pd
 
+#def actualizar_diccionario(fila, diccionario):
+#    for key, value in diccionario.items():
+#        try:
+#            if fila[key[0]] == key[1]:
+#                diccionario[key] = 1
+#        except:
+#            pass
+#    return diccionario
+
 def actualizar_diccionario(fila, diccionario):
     for key, value in diccionario.items():
-        try:
+        if isinstance(key, tuple):  # Si la columna es una tupla
             if fila[key[0]] == key[1]:
                 diccionario[key] = 1
-        except:
-            pass
+        else:  # Si la columna es un string
+            if isinstance(fila[key], int):
+                diccionario[key] = fila[key]
+            elif fila[key] == key:
+                diccionario[key] = 1
     return diccionario
 
 def limpiar_datos(df):

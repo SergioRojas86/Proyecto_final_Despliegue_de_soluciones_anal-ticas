@@ -13,6 +13,15 @@ def limpiar_datos(df):
 
     df_poblacion = pd.read_excel('pages/inafed_bd_1679023638.xlsx', index_col=False)
 
+    columnas_enteros = ['ID_ENTIDAD', 'ID_MUNICIPIO', 'ANIO', 'MES', 'ID_HORA', 'ID_MINUTO', 'ID_DIA',
+                    'AUTOMOVIL', 'CAMPASAJ', 'MICROBUS', 'PASCAMION', 'OMNIBUS', 'TRANVIA', 'CAMIONETA',
+                    'CAMION', 'TRACTOR', 'FERROCARRI', 'MOTOCICLET', 'BICICLETA', 'OTROVEHIC', 'ID_EDAD',
+                    'CONDMUERTO', 'CONDHERIDO', 'PASAMUERTO', 'PASAHERIDO', 'PEATMUERTO', 'PEATHERIDO',
+                    'CICLMUERTO', 'CICLHERIDO', 'OTROMUERTO', 'OTROHERIDO', 'NEMUERTO', 'NEHERIDO']
+
+    # Convertir columnas a tipo int64
+    df[columnas_enteros] = df[columnas_enteros].astype('int64')
+
     df['Cve_inegi'] = df['ID_ENTIDAD']*1000 + df.ID_MUNICIPIO
 
     df_2 = df.merge(df_poblacion, on='Cve_inegi', how='left')

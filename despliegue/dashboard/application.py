@@ -125,9 +125,8 @@ app.layout = dbc.Container([
 #register_callbacks(app)
 
 # This call will be used with Gunicorn server
-#application = app.server
+application = app.server
 
 # Testing server, don't use in production, host
 if __name__ == "__main__":
-    #application.run(host='0.0.0.0', port=8050)
-    app.run(debug=True)
+    application.run(host='0.0.0.0', port=8050)

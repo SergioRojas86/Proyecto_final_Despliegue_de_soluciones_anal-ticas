@@ -93,6 +93,6 @@ def limpiar_datos(df_initial_m):
 
     # Separar las variables predictoras de la variable de respuesta
     XTotal = df_initial_final.to_numpy()
-    print(df_initial_m)
+    print(df_initial_con)
 
     return XTotal

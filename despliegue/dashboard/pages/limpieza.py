@@ -72,8 +72,11 @@ def limpiar_datos(df_initial_m):
     todas_dummies = []
     for i in list(df_initial_cat.columns):
         x = pd.get_dummies(df_initial_cat[i])
+        print('x',x)
         x = x[pareto_entry(i,df_initial_cat)[i].unique()]
+        print('pareto',x)
         x = x.iloc[:,:-1]
+        print('iloc',x)
         column_index = []
         for j in list(x.columns):
             column_index.append((i,j))
@@ -81,7 +84,6 @@ def limpiar_datos(df_initial_m):
         y = pd.DataFrame(x.values,index=x.index,columns=column_tuple)
         todas_dummies.append(y)
     
-    print('todas_dummies',todas_dummies)
     df_initial_dummies = pd.concat([i for i in todas_dummies], axis=1)
 
     desc_con = crear_calidad(df_initial_m)
